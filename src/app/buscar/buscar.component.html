@@ -1,0 +1,55 @@
+<div class="container d-flex justify-content-center align-items-center">
+  <div class="col-6">
+    <h2 class="text-center">Buscar Contacto</h2>
+
+    <!-- Tabla para contener el formulario con fondo gris oscuro -->
+    <table class="table table-bordered table-striped table-dark">
+      <thead>
+        <tr>
+          <th colspan="2" class="text-center">Introduzca Nick</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Fila 1: Nick -->
+        <tr>
+          <td>
+            <div class="form-group">
+              <label for="nick" class="form-label text-light">Nick:</label>
+              <input
+                type="text"
+                id="nick"
+                [(ngModel)]="nick"
+                name="nick"
+                class="form-control"
+                required
+              />
+            </div>
+          </td>
+        </tr>
+
+        <!-- Fila de Submit -->
+        <tr>
+          <td colspan="2" class="text-center">
+            <button (click)="busquedaContacto()" type="button" class="btn btn-success">Buscar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Mostrar el contacto encontrado -->
+    <div *ngIf="contactoEncontrado" class="mt-3">
+      <h3>Contacto Encontrado:</h3>
+      <p><strong>Nombre Completo:</strong> {{ contactoEncontrado?.nombreCompleto }}</p>
+      <p><strong>Nick:</strong> {{ contactoEncontrado?.nick }}</p>
+      <p><strong>Email:</strong> {{ contactoEncontrado?.email }}</p>
+      <p><strong>Teléfono:</strong> {{ contactoEncontrado?.telefono }}</p>
+      <p><strong>Fecha de Nacimiento:</strong> {{ contactoEncontrado?.fechaNacimiento }}</p>
+      <p><strong>Localidad:</strong> {{ contactoEncontrado?.localidad }}</p>
+    </div>
+
+    <!-- Si no se encuentra el contacto -->
+    <div *ngIf="!contactoEncontrado && nick" class="mt-3 text-danger">
+      <p>No se encontró ningún contacto con el nick "{{ nick }}"</p>
+    </div>
+  </div>
+</div>

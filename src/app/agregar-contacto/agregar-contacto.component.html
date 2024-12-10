@@ -1,0 +1,108 @@
+<div class="container d-flex justify-content-center align-items-center">
+  <div class="col-6">
+    <h2 class="text-center">Agregar Contacto</h2>
+
+    <!-- Tabla para contener el formulario con fondo gris oscuro -->
+    <form (ngSubmit)="guardarContacto()" #contactoForm="ngForm">
+      <table class="table table-bordered table-striped table-dark">
+        <thead>
+          <tr>
+            <th colspan="2" class="text-center">Formulario de Contacto</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Fila 1: Nombre Completo y Nick -->
+          <tr>
+            <td>
+              <div class="form-group">
+                <label for="nombreCompleto" class="form-label text-light">Nombre Completo:</label>
+                <input
+                  type="text"
+                  id="nombreCompleto"
+                  [(ngModel)]="nuevoContacto.nombreCompleto"
+                  name="nombreCompleto"
+                  class="form-control"
+                  required />
+              </div>
+            </td>
+            <td>
+              <div class="form-group">
+                <label for="nick" class="form-label text-light">Nick:</label>
+                <input
+                  type="text"
+                  id="nick"
+                  [(ngModel)]="nuevoContacto.nick"
+                  name="nick"
+                  class="form-control"
+                  required />
+              </div>
+            </td>
+          </tr>
+
+          <!-- Fila 2: Email y Teléfono -->
+          <tr>
+            <td>
+              <div class="form-group">
+                <label for="email" class="form-label text-light">Email:</label>
+                <input
+                  type="email"
+                  id="email"
+                  [(ngModel)]="nuevoContacto.email"
+                  name="email"
+                  class="form-control"
+                  required />
+              </div>
+            </td>
+            <td>
+              <div class="form-group">
+                <label for="telefono" class="form-label text-light">Teléfono:</label>
+                <input
+                  type="text"
+                  id="telefono"
+                  [(ngModel)]="nuevoContacto.telefono"
+                  name="telefono"
+                  class="form-control"
+                  required />
+              </div>
+            </td>
+          </tr>
+
+          <!-- Fila 3: Fecha de Nacimiento y Localidad -->
+          <tr>
+            <td>
+              <div class="form-group">
+                <label for="fechaNacimiento" class="form-label text-light">Fecha de Nacimiento:</label>
+                <input
+                  type="text"
+                  id="fechaNacimiento"
+                  [(ngModel)]="nuevoContacto.fechaNacimiento"
+                  name="fechaNacimiento"
+                  class="form-control"
+                  required />
+              </div>
+            </td>
+            <td>
+              <div class="form-group">
+                <label for="localidad" class="form-label text-light">Localidad:</label>
+                <input
+                  type="text"
+                  id="localidad"
+                  [(ngModel)]="nuevoContacto.localidad"
+                  name="localidad"
+                  class="form-control"
+                  required />
+              </div>
+            </td>
+          </tr>
+
+          <!-- Fila de Submit -->
+          <tr>
+            <td colspan="2" class="text-center">
+              <button type="submit" class="btn btn-success" [disabled]="contactoForm.invalid">Añadir Contacto</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+  </div>
+</div>

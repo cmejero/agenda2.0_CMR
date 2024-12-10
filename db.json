@@ -1,0 +1,40 @@
+{
+  "contactos": [
+    {
+      "nick": "Pepe",
+      "nombreCompleto": "Pepe Mejias",
+      "fechaNacimiento": "05/10/1964",
+      "email": "pepeLotas@gmaail.com",
+      "telefono": "3645644545",
+      "localidad": "Sevilla",
+      "id": "7d24"
+    },
+    {
+      "nick": "Juan",
+      "nombreCompleto": "Juan Ramirez",
+      "fechaNacimiento": "05/10/1894",
+      "email": "Juan@gmaail.com",
+      "telefono": "645644545",
+      "localidad": "Sevilla",
+      "id": "36dc"
+    },
+    {
+      "nick": "Maria",
+      "nombreCompleto": "Maria Lopez",
+      "fechaNacimiento": "05/10/1999",
+      "email": "maria@gmaail.com",
+      "telefono": "8645644545",
+      "localidad": "Sevilla",
+      "id": "08c5"
+    },
+    {
+      "id": "e585",
+      "nombreCompleto": "carlos",
+      "nick": "clubDeportivo",
+      "email": "ewrew@sda.dsf3",
+      "telefono": "45353453",
+      "fechaNacimiento": "05/10/1994",
+      "localidad": "Sevilla"
+    }
+  ]
+}
