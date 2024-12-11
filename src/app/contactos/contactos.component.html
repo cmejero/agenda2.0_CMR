@@ -1,10 +1,10 @@
-<h2>Listado de Clientes</h2>
+<h2 class="titulo-lista">Listado de Clientes</h2>
 
-<ul class="list-group">
-  <li *ngFor="let contacto of contactosPadre " class="list-group-item">
-
-  <app-ficha-contactos [contacto] ="contacto"></app-ficha-contactos>
-
+<ul class="list-group lista-clientes">
+  <li *ngFor="let contacto of contactosPadre" class="list-group-item">
+    <app-ficha-contactos 
+      [contacto]="contacto"
+      (onEliminar)="eliminarContacto($event)">
+    </app-ficha-contactos>
+  </li>
 </ul>
-
-

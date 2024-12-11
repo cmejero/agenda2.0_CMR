@@ -1,0 +1,75 @@
+/* Aumenta el tamaño de las letras en la navbar */
+.navbar-brand {
+    font-size: 2rem; /* Aumenta el tamaño del nombre del proyecto */
+    font-weight: bold; /* Hace que el texto sea más destacado */
+  }
+  
+  .navbar-nav .nav-link {
+    font-size: 1.25rem; /* Aumenta el tamaño de los enlaces */
+    font-weight: 500; /* Da un poco de énfasis al texto */
+  }
+  
+  .navbar-nav .nav-link.active {
+    color: #007bff; /* Color para el enlace activo */
+    font-weight: bold; /* Resalta el enlace activo */
+  }
+  
+  /* Centrado del contenedor principal sin afectar el ancho */
+  .container-main {
+    
+    justify-content: center; /* Centra el contenido horizontalmente */
+    
+  }
+  
+  /* Esto permite que el contenido no se estreche */
+  .router-outlet {
+    width: 100%; /* Ocupa el 100% del ancho disponible */
+    max-width: 1200px; /* Opcional: establece un ancho máximo si deseas limitar el ancho del contenido */
+    margin: 0 auto; /* Centra el contenido en la pantalla */
+  }
+  /* Barra de navegación */
+.navbar {
+  background-color: #f8f9fa; /* Fondo gris claro para la barra de navegación */
+  border-bottom: 1px solid #ddd; /* Borde sutil para darle definición */
+  padding: 10px 0; /* Espaciado alrededor de la barra */
+}
+
+.navbar-brand {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #007bff; /* Color azul para la marca */
+  text-transform: uppercase;
+}
+
+.navbar-toggler-icon {
+  background-color: #007bff; /* Cambiar el color del icono del menú en móviles */
+}
+
+/* Estilo para los enlaces de la barra de navegación */
+.navbar-nav .nav-item .nav-link {
+  font-size: 1.1em;
+  color: #555; /* Color de texto gris oscuro para los enlaces */
+  padding: 8px 15px;
+  text-transform: uppercase; /* Convertir el texto a mayúsculas */
+  transition: background-color 0.3s ease; /* Transición suave para hover */
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+  background-color: #e2e6ea; /* Fondo gris suave cuando se pasa el cursor */
+  color: #007bff; /* Color azul para el texto cuando se pasa el cursor */
+}
+
+/* Contenedor principal */
+.container-main {
+  background-color: #f0f2f5; /* Fondo gris muy suave para el contenido principal */
+  padding: 20px;
+  border-radius: 8px; /* Bordes redondeados para el contenedor */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para darle profundidad */
+  max-width: 1200px;
+  margin: 20px auto; /* Centrar el contenedor */
+}
+
+/* Estilo para el contenido cuando se carga el router-outlet */
+router-outlet {
+  padding: 20px;
+}

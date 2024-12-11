@@ -13,28 +13,28 @@ import { CommonModule } from '@angular/common';
 })
 export class BuscarComponent {
 
-  nick: string = '';  // Variable para almacenar el nick introducido
-  contactoEncontrado: Contacto | null = null;
+  nick: string = '';  
+  contactoEncontrado: Contacto | null = null;  
 
-  @Output() buscarContacto = new EventEmitter<string>();  // Emitir el nick al componente padre
+  @Output() buscarContacto = new EventEmitter<string>();  // Emite el nick al componente padre
+
   constructor(private httpService: HttpService) {}
 
+  // Realiza la búsqueda del contacto por nick
   busquedaContacto(): void {
-    if (this.nick.trim()) {
+    if (this.nick.trim()) {  // Verifica si el nick no está vacío
+      // Llama al servicio HTTP para buscar el contacto por su nick
       this.httpService.buscarContactoPorNick(this.nick).subscribe(
         (contacto: Contacto | null) => {
-          if (contacto) {
-            this.contactoEncontrado = contacto; // Asigna el contacto encontrado
-          } else {
-            this.contactoEncontrado = null; // Si no se encuentra, limpia el resultado
-          }
+          this.contactoEncontrado = contacto ? contacto : null;
         },
         (error) => {
           console.error('Error al buscar el contacto:', error);
         }
       );
     } else {
-      this.contactoEncontrado = null; // Si no hay nick, limpia los resultados
+      // Si el nick está vacío, limpia los resultados
+      this.contactoEncontrado = null;
     }
   }
 }

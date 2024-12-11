@@ -1,0 +1,35 @@
+.acciones-container {
+    display: flex;
+    
+    gap: 30px; /* Da un poco de espacio entre los botones */
+    padding: 10px; /* Añade padding alrededor del contenedor */
+  }
+  
+  .btn {
+    padding: 10px 20px; /* Tamaño del botón */
+    border-radius: 5px; /* Bordes redondeados para un aspecto más suave */
+    font-weight: bold; /* Aumenta la seriedad del texto */
+    text-transform: uppercase; /* Hace el texto en mayúsculas para un estilo más formal */
+    border: none; /* Elimina bordes innecesarios */
+  }
+  
+  .btn-primary {
+    background-color: #00ff0d; /* Color de fondo para el botón "Añadir" */
+    color: white; /* Color de texto */
+    transition: background-color 0.3s ease; /* Transición suave para el hover */
+  }
+  
+  .btn-primary:hover {
+    background-color: #0cb300; /* Color al pasar el cursor sobre el botón */
+  }
+  
+  .btn-secondary {
+    background-color: #20fcd7; /* Color de fondo para el botón "Buscar" */
+    color: white;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #0499de; /* Color al pasar el cursor sobre el botón */
+  }
+  

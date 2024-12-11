@@ -1,0 +1,47 @@
+/* Título de la lista */
+.titulo-lista {
+    font-size: 2em;
+    color: #343a40; /* Un color oscuro para el título */
+    text-align: center; /* Centrar el título */
+    margin-bottom: 20px; /* Espacio debajo del título */
+    font-weight: bold;
+    border-bottom: 2px solid #007bff; /* Subrayado con un color azul */
+    padding-bottom: 10px;
+  }
+  
+  /* Estilos para la lista de clientes */
+  .lista-clientes {
+    list-style: none; /* Quitar los puntos por defecto de la lista */
+    padding: 0; /* Eliminar padding por defecto */
+    margin: 0; /* Eliminar margen */
+    max-width: 800px; /* Limitar el ancho de la lista */
+    margin: 20px auto; /* Centrar la lista */
+  }
+  
+  /* Estilo para cada item de la lista */
+  .list-group-item {
+    background-color: #fff; /* Fondo blanco para los items */
+    border: 1px solid #ddd; /* Borde sutil */
+    border-radius: 8px; /* Bordes redondeados */
+    margin-bottom: 10px; /* Espacio entre los items */
+    padding: 15px; /* Espacio dentro de los items */
+    display: flex; /* Flexbox para alinear contenido si es necesario */
+    justify-content: space-between; /* Asegura que el contenido se distribuya */
+    transition: background-color 0.3s ease; /* Transición suave para hover */
+  }
+  
+  /* Efecto hover para los items de la lista */
+  .list-group-item:hover {
+    background-color: #f1f1f1; /* Color de fondo cuando el cursor pasa sobre el item */
+    cursor: pointer; /* Cambio de cursor para indicar interactividad */
+  }
+  
+  /* Estilos para la ficha de contacto */
+  app-ficha-contactos {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  /* Puedes agregar más estilos específicos si es necesario para app-ficha-contactos */
+  

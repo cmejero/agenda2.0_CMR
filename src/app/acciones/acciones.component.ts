@@ -16,56 +16,54 @@ import { BuscarComponent } from "../buscar/buscar.component";
   styleUrl: './acciones.component.css'
 })
 export class AccionesComponent {
-  contactoSrv = inject(ContactosService);
-  httpService: HttpService = inject(HttpService);
-  contactos: Contacto[] = [];
-  contactoEncontrado: Contacto | null = null;
+  contactoSrv = inject(ContactosService);  // Servicio de contactos
+  httpService: HttpService = inject(HttpService);  // Servicio HTTP
+  contactos: Contacto[] = [];  // Lista de contactos
+  contactoEncontrado: Contacto | null = null;  // Contacto encontrado
 
-  componenteActivo: string = ''; // Estado inicial (ningún componente visible)
+  componenteActivo: string = '';  // Estado inicial (ningún componente visible)
 
+  // Cambia el componente activo para mostrar u ocultar
   toggleAction(componente: string) {
-    this.componenteActivo = componente; // Cambia el componente activo
+    this.componenteActivo = componente;  // Actualiza el componente activo
   }
 
-
+  // Agrega un nuevo contacto llamando al servicio HTTP
   agregarContacto(nuevoContacto: Contacto) {
-    // Llamamos al servicio para agregar el contacto al servidor
     this.httpService.guardarContacto(nuevoContacto).subscribe(
       (contactoGuardado) => {
-        // Cuando la respuesta es exitosa, agregar el contacto a la lista
-        this.contactos.push(contactoGuardado);
-        console.log('Contacto agregado al servidor:', contactoGuardado); // Verifica en consola
+        this.contactos.push(contactoGuardado);  // Añade el contacto a la lista
+        console.log('Contacto agregado al servidor:', contactoGuardado);  // Verifica en consola
       },
       (error) => {
-        // Manejo de errores en caso de que la solicitud falle
-        console.error('Error al agregar contacto:', error);
+        console.error('Error al agregar contacto:', error);  // Manejo de errores
       }
     );
   }
 
-   // Método para manejar la búsqueda de un contacto por nick
-   buscarContacto(nick: string) {
-    if (nick.trim() === '') {
+  // Busca un contacto por su "nick"
+  buscarContacto(nick: string) {
+    if (nick.trim() === '') {  // Validación para nick vacío
       console.log('Por favor, ingrese un nick válido');
       return;
     }
 
-    // Llamamos al servicio para buscar el contacto por nick
+    // Realiza la búsqueda del contacto por nick
     this.httpService.buscarContactoPorNick(nick).subscribe(
       (contacto) => {
         if (contacto) {
-          this.contactoEncontrado = contacto;
-          console.log('Contacto encontrado:', contacto); // Verifica el contacto encontrado
+          this.contactoEncontrado = contacto;  // Si se encuentra, asigna el contacto
+          console.log('Contacto encontrado:', contacto);  // Verifica en consola
         } else {
-          console.log('No se encontró un contacto con ese nick.');
+          console.log('No se encontró un contacto con ese nick.');  // No se encontró el contacto
           this.contactoEncontrado = null;
         }
       },
       (error) => {
-        console.error('Error al buscar el contacto:', error);
+        console.error('Error al buscar el contacto:', error);  // Manejo de errores
       }
     );
   }
-
-
 }
+
+

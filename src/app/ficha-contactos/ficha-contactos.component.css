@@ -1,0 +1,57 @@
+/* Estilos para la tarjeta */
+.card {
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidad */
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #ffffff; /* Fondo blanco */
+    padding: 20px;
+  }
+  
+  /* Cabecera de la tarjeta */
+  .card-header {
+    background-color: #007bff; /* Color de fondo azul para la cabecera */
+    color: white; /* Color del texto en blanco */
+    padding: 15px;
+    border-radius: 8px 8px 0 0; /* Bordes redondeados solo en la parte superior */
+  }
+  
+  .card-header h1 {
+    margin: 0;
+    font-size: 1.5em;
+  }
+  
+  /* Cuerpo de la tarjeta */
+  .card-body {
+    padding: 20px;
+  }
+  
+  /* Títulos dentro del cuerpo */
+  .card-body .card-title,
+  .card-body .card-text {
+    font-size: 1.1em;
+    color: #333; /* Color oscuro para el texto */
+    margin-bottom: 10px;
+  }
+  
+  /* Destacar el texto de los campos */
+  .card-body b {
+    color: #0056b3; /* Color azul para resaltar las etiquetas */
+  }
+  
+  /* Botón de eliminar */
+  .btn-eliminar {
+    background-color: #dc3545; /* Fondo rojo para el botón */
+    color: white; /* Texto en blanco */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px; /* Bordes redondeados en el botón */
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-eliminar:hover {
+    background-color: #c82333; /* Rojo más oscuro cuando se pasa el cursor */
+  }
+  

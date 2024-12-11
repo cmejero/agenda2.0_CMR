@@ -1,12 +1,11 @@
-
 <div class="card">
   <div class="card-header">
-<h1><b>Contacto:</b> {{contacto.nick}} ({{contacto.nombreCompleto}})</h1>
+    <h1><b>Contacto:</b> {{ contacto.nick }} ({{ contacto.nombreCompleto }})</h1>
   </div>
   <div class="card-body">
-    <p class="card-title"><b>Correo electronico:</b> {{contacto.email}}</p>
-    <p class="card-text"><b>Telefono:</b> {{contacto.telefono}}</p>
-    <p class="card-text"><b>Localidad:</b> {{contacto.localidad}}</p>
+    <p class="card-title"><b>Correo electrónico:</b> {{ contacto.email }}</p>
+    <p class="card-text"><b>Teléfono:</b> {{ contacto.telefono }}</p>
+    <p class="card-text"><b>Localidad:</b> {{ contacto.localidad }}</p>
+    <button (click)="eliminarContacto()" class="btn btn-eliminar">Eliminar</button>
   </div>
 </div>
-

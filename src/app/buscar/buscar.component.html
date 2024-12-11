@@ -37,19 +37,20 @@
     </table>
 
     <!-- Mostrar el contacto encontrado -->
-    <div *ngIf="contactoEncontrado" class="mt-3">
-      <h3>Contacto Encontrado:</h3>
-      <p><strong>Nombre Completo:</strong> {{ contactoEncontrado?.nombreCompleto }}</p>
-      <p><strong>Nick:</strong> {{ contactoEncontrado?.nick }}</p>
-      <p><strong>Email:</strong> {{ contactoEncontrado?.email }}</p>
-      <p><strong>Teléfono:</strong> {{ contactoEncontrado?.telefono }}</p>
-      <p><strong>Fecha de Nacimiento:</strong> {{ contactoEncontrado?.fechaNacimiento }}</p>
-      <p><strong>Localidad:</strong> {{ contactoEncontrado?.localidad }}</p>
+    <div *ngIf="contactoEncontrado" class="contacto-info mt-3">
+      <h3 class="titulo-contacto">Contacto Encontrado</h3>
+      <div class="info-contacto">
+        <p><strong>Nombre Completo:</strong> {{ contactoEncontrado?.nombreCompleto }}</p>
+        <p><strong>Nick:</strong> {{ contactoEncontrado?.nick }}</p>
+        <p><strong>Email:</strong> {{ contactoEncontrado?.email }}</p>
+        <p><strong>Teléfono:</strong> {{ contactoEncontrado?.telefono }}</p>
+        <p><strong>Fecha de Nacimiento:</strong> {{ contactoEncontrado?.fechaNacimiento }}</p>
+        <p><strong>Localidad:</strong> {{ contactoEncontrado?.localidad }}</p>
+      </div>
     </div>
-
+    
     <!-- Si no se encuentra el contacto -->
-    <div *ngIf="!contactoEncontrado && nick" class="mt-3 text-danger">
+    <div *ngIf="!contactoEncontrado && nick" class="mt-3 text-danger mensaje-error">
       <p>No se encontró ningún contacto con el nick "{{ nick }}"</p>
     </div>
-  </div>
-</div>
+    

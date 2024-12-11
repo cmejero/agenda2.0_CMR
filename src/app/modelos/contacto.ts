@@ -1,4 +1,5 @@
 export interface Contacto {
+  id: number;
   nombreCompleto: string;
   nick: string;
   fechaNacimiento: string;

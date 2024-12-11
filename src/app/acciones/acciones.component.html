@@ -1,11 +1,8 @@
 <div class="acciones-container">
-  <button class="btn btn-success" (click)="toggleAction('hijo1')">Añadir</button>
-  <button class="btn btn-primary" (click)="toggleAction('hijo2')" >Buscar</button>
+  <button class="btn btn-primary" (click)="toggleAction('hijo1')">Añadir</button>
+  <button class="btn btn-secondary" (click)="toggleAction('hijo2')">Buscar</button>
 </div>
 
 <app-agregar-contacto *ngIf="componenteActivo === 'hijo1'" (contactoAgregado)="agregarContacto($event)"></app-agregar-contacto>
 
-
 <app-buscar *ngIf="componenteActivo === 'hijo2'" (buscarContacto)="buscarContacto($event)"></app-buscar>
-
-  

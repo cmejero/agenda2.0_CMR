@@ -1,0 +1,51 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif; /* Usamos una fuente clara y profesional */
+    background-color: #f4f7fa; /* Fondo suave para no ser agresivo a la vista */
+    color: #333; /* Color de texto oscuro para mejor legibilidad */
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Estilo para el contenedor principal del contacto */
+  .contacto-info {
+    background-color: #fff; /* Fondo blanco para resaltar el contenido */
+    border-radius: 8px; /* Bordes redondeados para suavizar el diseño */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para dar profundidad */
+    max-width: 600px;
+    margin: 20px auto; /* Centra el contenedor horizontalmente */
+  }
+  
+  /* Título de la sección de contacto */
+  .titulo-contacto {
+    font-size: 1.5em;
+    color: #0056b3; /* Un color azul para el título, para hacerlo destacar */
+    margin-bottom: 20px;
+    border-bottom: 2px solid #0056b3; /* Línea debajo del título para dar énfasis */
+    padding-bottom: 10px;
+  }
+  
+  /* Estilos para los datos de contacto */
+  .info-contacto p {
+    font-size: 1em;
+    margin: 10px 0;
+    line-height: 1.5;
+  }
+  
+  .info-contacto strong {
+    color: #444; /* Color para los elementos strong */
+  }
+  
+  /* Estilos para el mensaje de error si no se encuentra el contacto */
+  .mensaje-error {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #dc3545; /* Color rojo para mensajes de error */
+    background-color: #f8d7da; /* Fondo suave rojo */
+    padding: 15px;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 20px auto;
+  }
+  
